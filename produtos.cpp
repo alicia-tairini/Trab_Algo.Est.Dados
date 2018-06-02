@@ -1,3 +1,5 @@
+// Alícia Tairini         5º serie 
+
 #include <conio.h>
 #include <stdio.h>
 #include <string.h>
@@ -13,10 +15,10 @@ typedef struct compra {
 
 int main() {
     produt produtos[12];
-    int cont, cod, quant, opc, opcMax;
+    int cont, cod, quant, opc, opcaoMax;
     float precoAux, precoFinal;
       
-    opcMax = 2;
+    opcaoMax = 2;
 
     //Cadastro 01
     produtos[0].id = 1;
@@ -104,7 +106,7 @@ int main() {
     
     
     //Menu 
-     while (opcMax == 2) {
+     while (opcaoMax == 2) {
             precoAux = 0;
             opc = 1;
             precoFinal = 0;
@@ -112,14 +114,14 @@ int main() {
             while (opc == 1) {        
                 system("cls");
                 printf ("***************************************\n");
-                printf ("|         PRODUTOS DISPONIVEUS         |\n");
+                printf ("********* PRODUTOS DISPONIVEIS ********\n");
                 printf ("***************************************\n");
                 
                 for (cont = 0; cont <= 11; cont++) {
                     printf ("Codigo: %i    Produto: %s \n", produtos[cont].id, produtos[cont].Produto);    
                 }
         
-                printf ("\n\nDigite o codigo do produto que deseja compraf:\n ");
+                printf ("\n\nDigite o codigo do produto que deseja comprar:\n ");
                 scanf ("%i", &cod);
                 printf ("O produto eh: %s \n", produtos[cod-1].Produto);
                 
@@ -145,7 +147,7 @@ int main() {
             printf ("\n\nO Valor total da compra eh: R$ %.2f\n", precoFinal);
             
             printf ("\n\nDeseja finalizar sair do programa? [1] Sim [2] Nao\n");
-            scanf ("%i", &opcMax);
+            scanf ("%i", &opcaoMax);
         }
             getch();   
 }
